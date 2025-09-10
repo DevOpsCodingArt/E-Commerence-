@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+@import "tailwindcss-animated";
+
+
+body{
+    font-optical-sizing: auto;
+    background-color: #f5f0f0;
+    overflow-x: hidden;
+    }
+
+@utility container{
+    width: 90% ;
+    margin: 0 auto;
+}
+@theme {
+    --font-Montserrat: "Montserrat", "sans-serif"; 
+    --font-Raleway: "Raleway", "sans-serif"; 
+  --animate-wiggle: slide-in-right 1s ease-out forwards;
+    --animate-wiggle-delay-100: slide-in-right 1s ease-out forwards;
+  --animate-wiggle-delay-200: slide-in-right 1s ease-out 0.2s forwards;
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(1000%);
+    opacity: 0;
+  }
+  50%{
+    transform:translateX(40%);
+    opacity: .5;
+
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+}
+
+
+@theme{
+    --color-primary: #ff5252;
+}
+.link:hover{
+    color: var(--color-primary);
+}
+.btn{
+    background-color: var(--color-primary);
+    color: white;
+    font-weight: 500;
+    padding: 10px 20px;     
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.btn:hover{
+    background-color: black;
+    color: white;
+}
+header .top-strip{
+    border-top: 1px solid rgba(0, 0,0,.1);
+    border-bottom: 1px solid rgba(0, 0,0,.1);
+    }
+.MuiBadge-badge{
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.swiper-button-prev,.swiper-button-next{
+display: flex;
+align-items: center;
+justify-content: center;
+background: #fff;
+border-radius: 100%;
+width: 45px;
+height: 45px;
+min-width: 45px;
+box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.swiper-button-prev::after,.swiper-button-next::after{
+    font-size: 20px !important;
+    color: #000;
+}
